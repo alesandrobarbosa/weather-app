@@ -1,0 +1,217 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 25px;
+}
+
+.App-header {
+  background-color: #FFFFFF;
+  height: auto;
+  color: white;
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  text-align:center;
+  padding: 20px 0;
+  z-index: 999;
+}
+
+.wrapper{
+  width: 820px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main {
+  max-width: 960px;
+  min-height: 700px;
+  margin: auto;
+  background-color: #F1F1F1;
+  position: relative;
+}
+
+.card-nuuk{
+  background-color: #FFFFFF;
+  width: 250px;
+  float: left;
+  box-shadow: 1px 1px 3px 1px rgba(51, 51, 51, 0.1);
+  border-radius: 4px;
+  margin-top: 25px;
+}
+
+.card-urubici{
+  background-color: #FFFFFF;
+  width: 250px;
+  display: inline-block; 
+  box-shadow: 1px 1px 3px 1px rgba(51, 51, 51, 0.1);
+  border-radius: 4px;
+}
+
+.card-nairobi{
+  background-color: #FFFFFF;
+  width: 250px;
+  float: right;
+  box-shadow: 1px 1px 3px 1px rgba(51, 51, 51, 0.1);
+  border-radius: 4px;
+  margin-top: 25px;
+}
+
+h1{
+  color: #737C84;
+  font-weight: 400;
+  border-bottom: 1px solid #EBEBEB;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+h2 {
+  font-size: 5em;
+  margin: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 400;
+}
+
+.urubici-footer{
+  background: rgba(241, 241, 241, 0.5);
+    display: block;
+    height: 55px;
+}
+
+.pressure{
+  float: right;
+  margin-right: 30px;
+}
+
+.pressure p{
+  color: #bdbdbd;
+  font-weight: 300;
+  font-size: 0.85em;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.humidity{
+  float: left;
+  margin-left: 30px;
+}
+
+.humidity p {
+  color: #bdbdbd;
+  font-weight: 300;
+  font-size: 0.85em;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.date{
+  background: rgba(241, 241, 241, 0.5);
+  display: block;
+  color: #bdbdbd;
+  font-size: 12px;
+  padding: 15px 0px 15px 0px;
+}
+
+.date p{
+  font-weight: 300;
+  font-size: 0.7em;
+  padding-top: 12px;
+
+}
+
+.urubici-details{
+  color: #737C84!important;
+  font-weight: 400!important;
+  margin-top: 5px!important;
+  font-size: 0.95em!important;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.orange-weather{
+  color: #FF9636;
+}
+
+.blue-weather{
+  color: #69A3FF;
+}
+
+.red-weather{
+  color: #ED1946;
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 960px) {
+ 
+body{
+  background-color: #F1F1F1;
+}
+
+main {
+  width: 100%!important;
+  height: 100%!important;
+  margin: auto;
+  background-color: #F1F1F1;
+  position: initial!important;
+}
+
+.wrapper {
+  width: auto;
+  height: 100%;
+  padding: 40px;
+  margin-top: 30px;
+  position: initial!important; 
+  top: 0% !important; 
+  left: 0%!important; 
+  -webkit-transform: initial!important; 
+  -ms-transform: initial!important;
+  transform: initial!important; 
+}
+
+.card-nairobi {
+  background-color: #FFFFFF;
+  width: 100%!important; 
+  float: none!important; 
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(51, 51, 51, 0.1);
+  box-shadow: 1px 1px 3px 1px rgba(51, 51, 51, 0.1);
+  border-radius: 4px;
+  margin-top: 35px;
+}
+
+.card-urubici {
+  background-color: #FFFFFF;
+  width: 100%!important; 
+  float: none!important; 
+  margin-right: 0px!important;
+  margin-top: 35px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(51, 51, 51, 0.1);
+  box-shadow: 1px 1px 3px 1px rgba(51, 51, 51, 0.1);
+  border-radius: 4px;
+}
+
+.card-nuuk {
+  background-color: #FFFFFF;
+  width: 100%!important; 
+  float: none!important;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(51, 51, 51, 0.1);
+  box-shadow: 1px 1px 3px 1px rgba(51, 51, 51, 0.1);
+  border-radius: 4px;
+  margin-top: 35px;
+}
+
+}
