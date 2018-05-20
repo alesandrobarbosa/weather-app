@@ -17,7 +17,7 @@ class App extends Component {
         <Header/>
         <main>
           <section className="wrapper">
-            <Urubici/> 
+            <Urubici/>
             <Nuuk/> 
             <Nairobi/>  
           </section>

@@ -19,15 +19,7 @@ class Urubici extends Component {
         <div>
         { 
             this.state.list.map((item, indice) => {
-                this.date = new Date(item.dt * 1000);
-                this.hours = this.date.getHours();
-                this.minutes = this.date.getMinutes();
-                this.seconds = this.date.getSeconds();
-                this.ampm = this.hours >= 12 ? 'PM' : 'AM';
-                this.hours = this.hours % 12;
-                this.hours = this.hours ? this.hours : 12;
-                this.minutes = this.minutes < 10 ? '0'+ this.minutes : this.minutes;
-                this.seconds = this.seconds < 10 ? '0'+ this.seconds : this.seconds;
+                this.timeConverter(item);
 
                 return (
                     <div key={indice}>
@@ -70,6 +62,18 @@ class Urubici extends Component {
       </section>
     );
   }
+
+    timeConverter(item) {
+        this.date = new Date(item.dt * 1000);
+        this.hours = this.date.getHours();
+        this.minutes = this.date.getMinutes();
+        this.seconds = this.date.getSeconds();
+        this.ampm = this.hours >= 12 ? 'PM' : 'AM';
+        this.hours = this.hours % 12;
+        this.hours = this.hours ? this.hours : 12;
+        this.minutes = this.minutes < 10 ? '0' + this.minutes : this.minutes;
+        this.seconds = this.seconds < 10 ? '0' + this.seconds : this.seconds;
+    }
 }
 
 export default Urubici;
