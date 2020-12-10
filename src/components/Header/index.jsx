@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import InputSearch from "../InputSearch";
-
 class Header extends Component {
   render() {
     return (
