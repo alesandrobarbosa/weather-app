@@ -6,23 +6,24 @@ export const DataContext = createContext();
 export const DataProvider = (props) => {
     const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather?q=';
     const API_KEY = 'e77c9e2b0aad781c6ee58517d004e4e0';
-    const [value, setValue] = useState({});
-    const [data, setData] = useState({});
+    const [value, setValueContext] = useState('');
+    const [data, setDataContext] = useState({});
 
     useEffect(() => {
-        if (Object.values(value).length > 0) {
+        if (value !== '') {
             axios.get(`${BASE_URL}${value}&appid=${API_KEY}`)
                 .then(function (response) {
-                    setData(response)
+                    setDataContext(response)
                 })
                 .catch(function (error) {
                     console.log(error);
                 })
         }
+
     }, [value]);
 
     return (
-        <DataContext.Provider value={{ value: [value, setValue], data: [data, setData] }}>
+        <DataContext.Provider value={{ value: setValueContext, data: [data, setDataContext] }}>
             {props.children}
         </DataContext.Provider>
     )
