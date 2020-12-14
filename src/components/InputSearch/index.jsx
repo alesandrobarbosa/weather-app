@@ -1,34 +1,37 @@
 import React, { useState, useContext } from 'react';
-import { DataContext } from "../../Context";
+import { DataContext } from "../../context";
 
 import SearchIcon from '../../assets/images/search-solid.svg';
 import {
-    Container,
-    Input,
-    Button,
-    Image
+  Container,
+  ContainerInput,
+  Input,
+  Button,
+  Image
 } from './styles';
 
 const InputSearch = () => {
-    const [valueInput, setValue] = useState('');
-    const { value: [value, setData] } = useContext(DataContext);
+  const [valueInput, setValueInput] = useState('');
+  const { value: setValueContext } = useContext(DataContext);
 
-    const handleSearch = () => {
-        setData(valueInput)
-    }
+  const handleSearch = () => {
+    setValueContext(valueInput);
+  }
 
-    return (
-        <Container>
-            <Input type="text"
-                placeholder="Weather in you city.."
-                value={valueInput}
-                onChange={e => setValue(e.target.value)}
-            />
-            <Button type="submit" onClick={() => handleSearch()}>
-                <Image src={SearchIcon} alt="Search icon" />
-            </Button>
-        </Container>
-    );
+  return (
+    <Container>
+      <ContainerInput>
+        <Input type="text"
+          placeholder="Weather in you city.."
+          value={valueInput}
+          onChange={e => setValueInput(e.target.value)}
+        />
+        <Button type="submit" onClick={() => handleSearch()}>
+          <Image src={SearchIcon} alt="Search icon" />
+        </Button>
+      </ContainerInput>
+    </Container>
+  );
 }
 
 export default InputSearch;
