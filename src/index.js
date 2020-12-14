@@ -4,8 +4,8 @@ import { DataProvider } from "./context";
 import App from './App';
 
 ReactDOM.render(
-    <DataProvider>
-        <App />
-    </DataProvider>,
-    document.getElementById('root')
+   <DataProvider >
+      <App />
+   </DataProvider>,
+   document.getElementById('root')
 );
