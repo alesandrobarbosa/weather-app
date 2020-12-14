@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
         "openweathermap"
+    ],
+    "cSpell.ignoreWords": [
+        "isloading"
     ]
 }
